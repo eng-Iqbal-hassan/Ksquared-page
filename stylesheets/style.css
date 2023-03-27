@@ -116,7 +116,6 @@ main .header .btn-wrapper .btn-secondary {
 }
 main .services {
   display: flex;
-  flex: 1;
   padding: 0 4.375rem 3.75rem;
   background-color: #F9F4FF;
 }
@@ -154,7 +153,6 @@ main .services .image-wrapper::after {
 }
 main .services .services-content {
   margin-right: 0.75rem;
-  flex: 0 0 47rem;
 }
 main .services .services-content h1 {
   font-size: 4.375rem;

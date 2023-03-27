@@ -74,7 +74,7 @@
               <ul class="facilities-detail w-1">
                 <li>
                   <input type="checkbox" id="income-1" name="income-1">
-                  <label for="income=1">0 - $30,000</label>
+                  <label for="income-1">0 - $30,000</label>
                 </li>
                 <li>
                   <input type="checkbox" id="income-2" name="income-2">
@@ -380,6 +380,8 @@
     const hideDetail= document.querySelector(".hide-detail");
     const detailWrapper=document.querySelector(".facilities-detail-wrapper");
     const mainWrapper =document.querySelector(".main-wrapper");
+    const contentWrapper = document.querySelector(".content-wrapper");
+    const servicesContent = document.querySelector(".services-content");
     function showDetail () {
       if (detailWrapper.style.display !== "flex") {
         detailWrapper.style.display = "flex";
@@ -402,5 +404,10 @@
         }
       })
     }
+    servicesContent.addEventListener("click" , function(event) {
+      if (detailWrapper.style.display==="flex" && event.target===servicesContent) {
+        detailWrapper.style.display="none";
+      }
+    }) 
   </script>
 </html>
