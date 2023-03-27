@@ -31,7 +31,7 @@
             Welcome to our affordable housing platform, where we believe everyone deserves a comfortable and safe place to call home. Our mission is to connect individuals and families with affordable housing options, regardless of their income.
           </p>
           <div class="search-bar">
-            <input type="search" name="search" id="search" 
+            <input type="text" name="search" id="search" 
             placeholder="Enter your Address, Neighborhood, City or Zip code" />
             <button class="btn-primary">
               <img src="/assets/search-logo.svg" alt="search logo" />
@@ -173,7 +173,7 @@
       </div>
       <div class="main-wrapper">
         <div class="choose-us">
-          <h2>Why Choose us</h2>
+          <h2>Why Choose Us</h2>
           <p>Discover the Advantages of Choosing Us for Your Housing Needs</p>
           <div class="card-listing">
             <div class="card">
@@ -185,7 +185,7 @@
             </div>
             <div class="card">
               <div class="image">
-                <img src="/assets/choose-card-1.svg" alt="second-card-image" />
+                <img src="/assets/choose-card-2.svg" alt="second-card-image" />
               </div>
               <h5>Best Price</h5>
               <p>Discover Unbeatable Deals with Our Best-Price Guarantee!</p>
@@ -200,7 +200,7 @@
           </div>
         </div>
         <div class="feature">
-          <h2>Featured properties</h2>
+          <h2>Featured Properties</h2>
           <p>Highlighted Listings" or "Top Picks" could also be used as a subheading for featured properties</p>
           <div class="card-listing">
             <div class="card">
@@ -375,38 +375,38 @@
   </main>
   <footer>@2022 ksquared, All Right Reserved</footer>
 </body>
-  <script>
-    const body= document.body;
-    const hideDetail= document.querySelector(".hide-detail");
-    const detailWrapper=document.querySelector(".facilities-detail-wrapper");
-    const mainWrapper =document.querySelector(".main-wrapper");
-    const servicesContent = document.querySelector(".services-content");
-    function showDetail () {
-      if (detailWrapper.style.display !== "flex") {
-        detailWrapper.style.display = "flex";
-      }
-      else {
+<script>
+  const body= document.body;
+  const hideDetail= document.querySelector(".hide-detail");
+  const detailWrapper=document.querySelector(".facilities-detail-wrapper");
+  const mainWrapper =document.querySelector(".main-wrapper");
+  const servicesContent = document.querySelector(".services-content");
+  function showDetail () {
+    if (detailWrapper.style.display !== "flex") {
+      detailWrapper.style.display = "flex";
+    }
+    else {
+      detailWrapper.style.display = "none";
+    }
+  }
+  if (mainWrapper) {
+    mainWrapper.addEventListener("click" , () => {
+      if (detailWrapper.style.display !== "none") {
         detailWrapper.style.display = "none";
       }
-    }
-    if (mainWrapper) {
-      mainWrapper.addEventListener("click" , () => {
-        if (detailWrapper.style.display !== "none") {
-          detailWrapper.style.display = "none";
-        }
-      })
-    }
-    if (hideDetail) {
-      hideDetail.addEventListener("click" , () => {
-        if (detailWrapper.style.display !== "none") {
-          detailWrapper.style.display = "none";
-        }
-      })
-    }
-    servicesContent.addEventListener("click" , function(event) {
-      if (detailWrapper.style.display==="flex" && event.target===servicesContent) {
-        detailWrapper.style.display="none";
+    })
+  }
+  if (hideDetail) {
+    hideDetail.addEventListener("click" , () => {
+      if (detailWrapper.style.display !== "none") {
+        detailWrapper.style.display = "none";
       }
-    }) 
-  </script>
+    })
+  }
+  servicesContent.addEventListener("click" , function(event) {
+    if (detailWrapper.style.display==="flex" && event.target===servicesContent) {
+      detailWrapper.style.display="none";
+    }
+  }) 
+</script>
 </html>
