@@ -602,6 +602,10 @@ main .subscribe .mail .input-wrapper label {
 }
 main .subscribe .mail .input-wrapper input {
   position: absolute;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Proxima Nova";
+  color: #A3A3A3;
   width: 19.25rem;
   height: 2.75rem;
   border-radius: 12px;
