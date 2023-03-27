@@ -1,12 +1,412 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
 </head>
 <body>
-    Ksquared page
+  <main>
+    <div class="header">
+      <div class="logo">
+        <img src="/assets/logo.svg" alt="logo" />
+      </div>
+      <ul class="menu-listing">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact us</a></li>
+      </ul>
+      <div class="btn-wrapper">
+        <button class="btn btn-primary">Apply for Affordable Housing</button>
+        <button class="btn btn-secondary">Help</button>
+      </div>
+    </div>
+    <div class="content-wrapper">
+      <div class="services">
+        <div class="services-content">
+          <h1>Let’s Find Your Affordable House</h1>
+          <p>
+            Welcome to our affordable housing platform, where we believe everyone deserves a comfortable and safe place to call home. Our mission is to connect individuals and families with affordable housing options, regardless of their income.
+          </p>
+          <div class="search-bar">
+            <input type="text" name="search" id="search" 
+            placeholder="Enter your Address, Neighborhood, City or Zip code" />
+            <button class="btn-primary">
+              <img src="/assets/search-logo.svg" alt="search logo" />
+            </button>
+          </div>
+          <div class="drop-down">
+            <ul class="facilities">
+              <li class="facility-feature w-1" onclick="showDetail()">
+                <span>Income</span>
+                <div class="image">
+                  <img src="/assets/down-arrow.svg" alt="down-arrow" />
+                </div>
+              </li>
+              <li class="facility-feature w-2" onclick="showDetail()">
+                <span>Occupants</span>
+                <div class="image">
+                  <img src="/assets/down-arrow.svg" alt="down-arrow" />
+                </div>
+              </li>
+              <li class="facility-feature w-3" onclick="showDetail()">
+                <span>Section 8 Building</span>
+                <div class="image">
+                  <img src="/assets/down-arrow.svg" alt="down-arrow" />
+                </div>
+              </li>
+              <li class="facility-feature w-4" onclick="showDetail()">
+                <span>Bed & Bath</span>
+                <div class="image">
+                  <img src="/assets/down-arrow.svg" alt="down-arrow" />
+                </div>
+              </li>
+              <li class="facility-feature w-5" onclick="showDetail()">
+                <span>Price</span>
+                <div class="image">
+                  <img src="/assets/down-arrow.svg" alt="down-arrow" />
+                </div>
+              </li>
+            </ul>
+            <div class="facilities-detail-wrapper">
+              <ul class="facilities-detail w-1">
+                <li>
+                  <input type="checkbox" id="income-1" name="income-1">
+                  <label for="income-1">0 - $30,000</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="income-2" name="income-2">
+                  <label for="income-2">$30,000 - $45,000</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="income-3" name="income-3">
+                  <label for="income-3">$45,000 - $60,000</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="income-4" name="income-4">
+                  <label for="income-4">$60,000 +</label>
+                </li>
+              </ul>
+              <ul class="facilities-detail w-2">
+                <li>
+                  <input type="checkbox" id="Occupants-1" name="Occupants-1">
+                  <label for="Occupants-1">1</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="Occupants-2" name="Occupants-2">
+                  <label for="Occupants-2">2</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="Occupants-3" name="Occupants-3">
+                  <label for="Occupants-3">5</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="Occupants-4" name="Occupants-4">
+                  <label for="Occupants-4">6</label>
+                </li>
+              </ul>
+              <ul class="facilities-detail w-3">
+                <li>
+                  <input type="checkbox" id="building" name="building">
+                  <label for="building">Yes</label>
+                </li>
+              </ul>
+              <ul class="facilities-detail w-4">
+                <li>
+                  <input type="checkbox" id="facility-1" name="facility-1">
+                  <label for="facility-1">Any</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="facility-2" name="facility-2">
+                  <label for="facility-2">1</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="facility-3" name="facility-3">
+                  <label for="facility-3">2</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="facility-4" name="facility-4">
+                  <label for="facility-4">3</label>
+                </li>
+                <li>
+                  <input type="checkbox" id="facility-5" name="facility-5">
+                  <label for="facility-5">4+</label>
+                </li>
+              </ul>
+              <ul class="facilities-detail w-5">
+                <li class="price amount min-value">
+                  <label for="min-Price">Min</label>
+                  <input type="Price" id="min-Price" class="min-price" name="min-Price">
+                </li>
+                <li class="price amount max-value">
+                  <label for="max-Price">Max</label>
+                  <input type="Price" id="max-Price" class="max-price" name="max-Price">
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="stats-wrapper">
+            <div class="stat">
+              <h3>250+</h3>
+              <p>Property Ready</p>
+            </div>
+            <div class="stat">
+              <h3>450+</h3>
+              <p>Awards Winning</p>
+            </div>
+            <div class="stat">
+              <h3>780+</h3>
+              <p>Happy Customer</p>
+            </div>
+          </div>
+        </div>
+        <div class="image-wrapper">
+          <div class="service-image">
+            <img src="/assets/service.png" alt="image" />
+          </div>
+          <div class="image">
+            <img src="/assets/construction.png" alt="house" />
+          </div>
+        </div>
+      </div>
+      <div class="main-wrapper">
+        <div class="choose-us">
+          <h2>Why Choose Us</h2>
+          <p>Discover the Advantages of Choosing Us for Your Housing Needs</p>
+          <div class="card-listing">
+            <div class="card">
+              <div class="image">
+                <img src="/assets/choose-card-1.svg" alt="first-card-image" />
+              </div>
+              <h5>Quick Process</h5>
+              <p>Find Your Dream Home in a Snap with Our Quick and Easy Rental Process!</p>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="/assets/choose-card-2.svg" alt="second-card-image" />
+              </div>
+              <h5>Best Price</h5>
+              <p>Discover Unbeatable Deals with Our Best-Price Guarantee!</p>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="/assets/choose-card-3.svg" alt="third-card-image" />
+              </div>
+              <h5>Trusted</h5>
+              <p>Experience Peace of Mind with Our Trusted Rental Properties!</p>
+            </div>
+          </div>
+        </div>
+        <div class="feature">
+          <h2>Featured Properties</h2>
+          <p>Highlighted Listings" or "Top Picks" could also be used as a subheading for featured properties</p>
+          <div class="card-listing">
+            <div class="card">
+              <div class="image">
+                <img src="/assets/feature-card-1.png" alt="1st-card-image" />
+              </div>
+              <div class="featured-content">
+                <h6>Layout 1</h6>
+                <div class="location">
+                  <div class="image">
+                    <img src="/assets/location.svg" alt="location" />
+                  </div>
+                  <p>2000 West Diversey Parkway, Chicago, IL, 60647</p>
+                </div>
+                <div class="property">
+                  <p>Units: <span>414</span></p>
+                  <p>Bed: <span>3 bed</span></p>
+                  <div class="area">
+                    <div class="image">
+                      <img src="/assets/area.svg" alt="area" />
+                    </div>
+                    <p>800-1,600 Sqft</p>
+                  </div>
+                </div>
+                <div class="detail">
+                  <a href="#">Explore</a>
+                  <p>Monthly<span> : $800 - $1,500+</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="/assets/feature-card-2.png" alt="second-card-image" />
+              </div>
+              <div class="featured-content">
+                <h6>Layout 2</h6>
+                <div class="location">
+                  <div class="image">
+                    <img src="/assets/location.svg" alt="location" />
+                  </div>
+                  <p>21342 W. Taylor Street, Chicago, IL, 60607</p>
+                </div>
+                <div class="property">
+                  <p>Units: <span>414</span></p>
+                  <p>Bed: <span>1-3 bed</span></p>
+                  <div class="area">
+                    <div class="image">
+                      <img src="/assets/area.svg" alt="area" />
+                    </div>
+                    <p>800-1,600 Sqft</p>
+                  </div>
+                </div>
+                <div class="detail">
+                  <a href="#">Explore</a>
+                  <p>Monthly<span> : $800 - $1,500+</span></p>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="image">
+                <img src="/assets/feature-card-3.png" alt="third-card-image" />
+              </div>
+              <div class="featured-content">
+                <h6>Layout 3</h6>
+                <div class="location">
+                  <div class="image">
+                    <img src="/assets/location.svg" alt="location" />
+                  </div>
+                  <p>1448 North Sedgwick St, Chicago, IL, 60610</p>
+                </div>
+                <div class="property">
+                  <p>Units: <span>414</span></p>
+                  <p>Bed: <span>2-3 bed</span></p>
+                  <div class="area">
+                    <div class="image">
+                      <img src="/assets/area.svg" alt="area" />
+                    </div>
+                    <p>1,200-1,500 Sqft</p>
+                  </div>
+                </div>
+                <div class="detail">
+                  <a href="#">Explore</a>
+                  <p>Monthly<span> : $1200 - $1,500+</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="comfort">
+          <div class="image-wrapper">
+            <div class="image">
+              <img src="/assets/comfort.png" alt="comfort" />
+            </div>
+            <div class="image comfort-after">
+              <img src="/assets/comfort-after.svg" alt="construct" />
+            </div>
+          </div>
+          <div class="comfort-content">
+            <h3>Comfort Is Our Top Priority For You</h3>
+            <p>
+              At our company, we understand that comfort is a key aspect in ensuring a positive experience for our customers. That's why we have made it our top priority to provide you with the best possible comfort during your time with us.
+            </p>
+            <ul class="facilities">
+              <li>Customer Service: Putting Residents First</li>
+              <li>Our Story: A Legacy of Quality Housing Solutions</li>
+              <li>Enhancing Lives: Our Commitment to Affordable Housing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="subscribe">
+        <div class="subscribe-content">
+          <h4>Are you searching a affordable house</h4>
+          <p>
+            Stay informed on the latest in affordable housing by subscribing to our newsletter. Stay up-to-date on new properties, special deals, and expert tips to help you find the perfect home.
+          </p>
+        </div>
+        <div class="mail">
+          <div class="input-wrapper">
+            <label for="Search">Put your email address</label>
+            <input type="text" id="Search" name="search" placeholder="Enter your email" />
+          </div>
+          <button class="btn-primary">Send</button>
+        </div>
+      </div>
+      <div class="detail-listing">
+        <div class="listing-content">
+          <div class="image">
+            <img src="/assets/listing-logo.svg" alt="logo" />
+          </div>
+          <p>
+            Affordable Housing is a one-stop resource for anyone seeking cost-effective housing options. Find information, tips, and listings for affordable homes, apartments, and rental properties all in one place.
+          </p>
+        </div>
+        <div class="ul-wrapper">
+          <ul>
+            <h6>Quick links</h6>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Terms & Condition</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+          <ul>
+            <h6>Company</h6>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Why choose us</a></li>
+            <li><a href="#">Blogs</a></li>
+          </ul>
+          <ul>
+            <h6>Contact info</h6>
+            <li><a href="#">847 757 5571</a></li>
+            <li><a href="#">loremipsum34@gmail.com</a></li>
+            <li><a href="#">2351 W North Ave, Chicago, IL 60646</a></li>
+            <li class="social-icons">
+              <div class="image">
+                <img src="/assets/Facebook.svg" alt="Facebook" />
+              </div>
+              <div class="image">
+                <img src="/assets/Twitter.svg" alt="twitter" />
+              </div>
+              <div class="image">
+                <img src="/assets/LinkedIn.svg" alt="LinkedIn" />
+              </div>
+              <div class="image">
+                <img src="/assets/YouTube.svg" alt="YouTube" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>@2022 ksquared, All Right Reserved</footer>
 </body>
+<script>
+  const body= document.body;
+  const hideDetail= document.querySelector(".hide-detail");
+  const detailWrapper=document.querySelector(".facilities-detail-wrapper");
+  const mainWrapper =document.querySelector(".main-wrapper");
+  const servicesContent = document.querySelector(".services-content");
+  function showDetail () {
+    if (detailWrapper.style.display !== "flex") {
+      detailWrapper.style.display = "flex";
+    }
+    else {
+      detailWrapper.style.display = "none";
+    }
+  }
+  if (mainWrapper) {
+    mainWrapper.addEventListener("click" , () => {
+      if (detailWrapper.style.display !== "none") {
+        detailWrapper.style.display = "none";
+      }
+    })
+  }
+  if (hideDetail) {
+    hideDetail.addEventListener("click" , () => {
+      if (detailWrapper.style.display !== "none") {
+        detailWrapper.style.display = "none";
+      }
+    })
+  }
+  servicesContent.addEventListener("click" , function(event) {
+    if (detailWrapper.style.display==="flex" && event.target===servicesContent) {
+      detailWrapper.style.display="none";
+    }
+  }) 
+</script>
 </html>
